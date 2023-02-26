@@ -13,6 +13,8 @@
 		22DCA44329AB4E81001ED045 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA44229AB4E81001ED045 /* HomeView.swift */; };
 		22DCA44829AB5B24001ED045 /* UberMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA44729AB5B24001ED045 /* UberMapViewRepresentable.swift */; };
 		22DCA44A29ABB8A2001ED045 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA44929ABB8A2001ED045 /* LocationManager.swift */; };
+		22DCA45129ABC945001ED045 /* LocationSearchActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA45029ABC945001ED045 /* LocationSearchActivationView.swift */; };
+		22DCA45329ABCE6E001ED045 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA45229ABCE6E001ED045 /* MapViewActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		22DCA44229AB4E81001ED045 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		22DCA44729AB5B24001ED045 /* UberMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberMapViewRepresentable.swift; sourceTree = "<group>"; };
 		22DCA44929ABB8A2001ED045 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		22DCA45029ABC945001ED045 /* LocationSearchActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchActivationView.swift; sourceTree = "<group>"; };
+		22DCA45229ABCE6E001ED045 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,8 @@
 		22DCA43D29AB4DB9001ED045 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				22DCA43F29AB4E0C001ED045 /* ViewModel */,
-				22DCA44129AB4E27001ED045 /* Views */,
+				22DCA44D29ABC769001ED045 /* LocationSearch */,
+				22DCA44C29ABC753001ED045 /* Home */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -123,18 +127,44 @@
 		22DCA44129AB4E27001ED045 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				22DCA44B29ABB8B3001ED045 /* Representables */,
 				22DCA44229AB4E81001ED045 /* HomeView.swift */,
+				22DCA44729AB5B24001ED045 /* UberMapViewRepresentable.swift */,
+				22DCA45229ABCE6E001ED045 /* MapViewActionButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		22DCA44B29ABB8B3001ED045 /* Representables */ = {
+		22DCA44C29ABC753001ED045 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				22DCA44729AB5B24001ED045 /* UberMapViewRepresentable.swift */,
+				22DCA43F29AB4E0C001ED045 /* ViewModel */,
+				22DCA44129AB4E27001ED045 /* Views */,
 			);
-			path = Representables;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		22DCA44D29ABC769001ED045 /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				22DCA44E29ABC77B001ED045 /* ViewModel */,
+				22DCA44F29ABC787001ED045 /* View */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		22DCA44E29ABC77B001ED045 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22DCA44F29ABC787001ED045 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22DCA45029ABC945001ED045 /* LocationSearchActivationView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,9 +238,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22DCA44A29ABB8A2001ED045 /* LocationManager.swift in Sources */,
+				22DCA45329ABCE6E001ED045 /* MapViewActionButton.swift in Sources */,
 				22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */,
 				22DCA44829AB5B24001ED045 /* UberMapViewRepresentable.swift in Sources */,
 				22DCA44329AB4E81001ED045 /* HomeView.swift in Sources */,
+				22DCA45129ABC945001ED045 /* LocationSearchActivationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
