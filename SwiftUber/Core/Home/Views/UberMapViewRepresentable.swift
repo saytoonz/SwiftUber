@@ -30,8 +30,9 @@ struct UberMapViewRepresentable: UIViewRepresentable {
     ///   - 1:  Display polylines
     ///   - 2: etc
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        if let selectedLoctaoin = locationSearchVM.selectedLocationCoordinate {
-            
+        if let coordinate = locationSearchVM.selectedLocationCoordinate {
+//            print("DEBUG: UberMapViewRepresentable->updateUIView-> selectedLoctaoin \(coordinate)")
+            context.coordinator.addAndSelectAnnotation(withCoodinate: coordinate)
         }
     }
     
@@ -46,13 +47,19 @@ struct UberMapViewRepresentable: UIViewRepresentable {
 extension UberMapViewRepresentable {
     
     class MapCodinator: NSObject, MKMapViewDelegate {
+        // MARK: - Properties
         let parent: UberMapViewRepresentable
         
+        
+         // MARK: - Init
         init(parent: UberMapViewRepresentable) {
             self.parent = parent
             super.init()
         }
         
+        
+        
+        // MARK: - MKMapView Delegate
         /// This delegate method tell if the user location is updated
         /// In here, we will use the userLocation parameter to create a boundrary/Region to zoom in
         /// And display the user location
@@ -69,6 +76,20 @@ extension UberMapViewRepresentable {
             )
             
             parent.mapView.setRegion(region, animated: true)
+        }
+        
+        
+        // MARK: - Helpers
+        
+        // Add Annotation / Marker to mapview
+        func addAndSelectAnnotation(withCoodinate coodinate: CLLocationCoordinate2D) {
+            
+            parent.mapView.removeAnnotations(parent.mapView.annotations)
+            
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = coodinate
+            self.parent.mapView.addAnnotation(annotation)
+            self.parent.mapView.selectAnnotation(annotation, animated: true)
         }
     }
     
