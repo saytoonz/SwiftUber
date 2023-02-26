@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */; };
-		22DCA42F29AB4D26001ED045 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA42E29AB4D26001ED045 /* ContentView.swift */; };
 		22DCA43129AB4D2B001ED045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43029AB4D2B001ED045 /* Assets.xcassets */; };
 		22DCA43429AB4D2B001ED045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43329AB4D2B001ED045 /* Preview Assets.xcassets */; };
+		22DCA44329AB4E81001ED045 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA44229AB4E81001ED045 /* HomeView.swift */; };
+		22DCA44829AB5B24001ED045 /* UberMapViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA44729AB5B24001ED045 /* UberMapViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		22DCA42929AB4D26001ED045 /* SwiftUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUberApp.swift; sourceTree = "<group>"; };
-		22DCA42E29AB4D26001ED045 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		22DCA43029AB4D2B001ED045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22DCA43329AB4D2B001ED045 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		22DCA44229AB4E81001ED045 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		22DCA44729AB5B24001ED045 /* UberMapViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberMapViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,11 @@
 		22DCA42B29AB4D26001ED045 /* SwiftUber */ = {
 			isa = PBXGroup;
 			children = (
-				22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */,
-				22DCA42E29AB4D26001ED045 /* ContentView.swift */,
+				22DCA43E29AB4DBF001ED045 /* App */,
+				22DCA43D29AB4DB9001ED045 /* Core */,
+				22DCA43C29AB4DB7001ED045 /* Extensions */,
+				22DCA43B29AB4DB6001ED045 /* Managers */,
+				22DCA43A29AB4DB3001ED045 /* Models */,
 				22DCA43029AB4D2B001ED045 /* Assets.xcassets */,
 				22DCA43229AB4D2B001ED045 /* Preview Content */,
 			);
@@ -65,6 +70,68 @@
 				22DCA43329AB4D2B001ED045 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		22DCA43A29AB4DB3001ED045 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		22DCA43B29AB4DB6001ED045 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		22DCA43C29AB4DB7001ED045 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		22DCA43D29AB4DB9001ED045 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				22DCA43F29AB4E0C001ED045 /* ViewModel */,
+				22DCA44129AB4E27001ED045 /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		22DCA43E29AB4DBF001ED045 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		22DCA43F29AB4E0C001ED045 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		22DCA44129AB4E27001ED045 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				22DCA44629AB5AB1001ED045 /* Components */,
+				22DCA44229AB4E81001ED045 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		22DCA44629AB5AB1001ED045 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				22DCA44729AB5B24001ED045 /* UberMapViewRepresentable.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22DCA42F29AB4D26001ED045 /* ContentView.swift in Sources */,
 				22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */,
+				22DCA44829AB5B24001ED045 /* UberMapViewRepresentable.swift in Sources */,
+				22DCA44329AB4E81001ED045 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
