@@ -30,7 +30,7 @@ struct UberMapViewRepresentable: UIViewRepresentable {
     ///   - 1:  Display polylines
     ///   - 2: etc
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        if let selectedLoctaoin = locationSearchVM.selectedLocation {
+        if let selectedLoctaoin = locationSearchVM.selectedLocationCoordinate {
             
         }
     }
