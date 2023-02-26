@@ -10,6 +10,8 @@ import MapKit
 
 struct UberMapViewRepresentable: UIViewRepresentable {
     
+    @EnvironmentObject var locationSearchVM: LocationSearchViewModel
+    
     let mapView = MKMapView()
     let locationManager = LocationManager()
     
@@ -28,7 +30,9 @@ struct UberMapViewRepresentable: UIViewRepresentable {
     ///   - 1:  Display polylines
     ///   - 2: etc
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        
+        if let selectedLoctaoin = locationSearchVM.selectedLocation {
+            
+        }
     }
     
     func makeCoordinator() -> MapCodinator {

@@ -12,6 +12,8 @@ class LocationSearchViewModel: NSObject, ObservableObject {
     
     //MARK: - Properties
     @Published var result = [MKLocalSearchCompletion]()
+    @Published var selectedLocation: String?
+    
     private let searchCompleter = MKLocalSearchCompleter()
     
     var queryFragments: String = "" {
@@ -26,7 +28,13 @@ class LocationSearchViewModel: NSObject, ObservableObject {
         super.init()
         searchCompleter.delegate = self
         searchCompleter.queryFragment = queryFragments
-        
+    }
+    
+    //MARK: - Helpers
+    /// Setter function to update selectedLocation
+    /// - Parameter location: Selected locaton
+    func selectLocation(_ location: String) {
+        self.selectedLocation = location
     }
 }
 
