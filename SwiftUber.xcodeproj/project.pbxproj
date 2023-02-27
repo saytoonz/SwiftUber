@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		225E45AB29AD405100B612ED /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E45AA29AD405100B612ED /* RideRequestView.swift */; };
 		22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */; };
 		22DCA43129AB4D2B001ED045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43029AB4D2B001ED045 /* Assets.xcassets */; };
 		22DCA43429AB4D2B001ED045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43329AB4D2B001ED045 /* Preview Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		225E45AA29AD405100B612ED /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		22DCA42929AB4D26001ED045 /* SwiftUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUberApp.swift; sourceTree = "<group>"; };
 		22DCA43029AB4D2B001ED045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		225E45A929AD403300B612ED /* Trips */ = {
+			isa = PBXGroup;
+			children = (
+				225E45AA29AD405100B612ED /* RideRequestView.swift */,
+			);
+			path = Trips;
+			sourceTree = "<group>";
+		};
 		22DCA42029AB4D25001ED045 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		22DCA43D29AB4DB9001ED045 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				225E45A929AD403300B612ED /* Trips */,
 				22DCA44D29ABC769001ED045 /* LocationSearch */,
 				22DCA44C29ABC753001ED045 /* Home */,
 			);
@@ -252,6 +263,7 @@
 				22DCA45929ABE121001ED045 /* LocationSearchViewModel.swift in Sources */,
 				22DCA45529ABD2E2001ED045 /* LocationSearchView.swift in Sources */,
 				22DCA44A29ABB8A2001ED045 /* LocationManager.swift in Sources */,
+				225E45AB29AD405100B612ED /* RideRequestView.swift in Sources */,
 				22DCA45B29AC8EFC001ED045 /* MapViewState.swift in Sources */,
 				22DCA45329ABCE6E001ED045 /* MapViewActionButton.swift in Sources */,
 				22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */,
