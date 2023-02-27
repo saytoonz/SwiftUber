@@ -10,6 +10,7 @@ import MapKit
 
 struct UberMapViewRepresentable: UIViewRepresentable {
     
+    @Binding var mapState: MapViewState
     @EnvironmentObject var locationSearchVM: LocationSearchViewModel
     
     let mapView = MKMapView()
@@ -30,10 +31,21 @@ struct UberMapViewRepresentable: UIViewRepresentable {
     ///   - 1:  Display polylines
     ///   - 2: etc
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        if let coordinate = locationSearchVM.selectedLocationCoordinate {
-//            print("DEBUG: UberMapViewRepresentable->updateUIView-> selectedLoctaoin \(coordinate)")
-            context.coordinator.addAndSelectAnnotation(withCoodinate: coordinate)
-            context.coordinator.configurePolylines(withDestinationCoordinate: coordinate  )
+        
+        switch mapState {
+        case .noInput:
+            context.coordinator.clearMapViewAndRecenterOnUserLocation()
+            break
+        case .searchingForLocation:
+            break
+        case .locationSelected:
+                //  print("UberMapViewRepresentable->updateUIView->selectedLoctaoin:  Map state is\(mapState)")
+            if let coordinate = locationSearchVM.selectedLocationCoordinate {
+                //  print("DEBUG: UberMapViewRepresentable->updateUIView-> selectedLoctaoin \(coordinate)")
+                context.coordinator.addAndSelectAnnotation(withCoodinate: coordinate)
+                context.coordinator.configurePolylines(withDestinationCoordinate: coordinate  )
+            }
+            break
         }
     }
     
@@ -51,8 +63,9 @@ extension UberMapViewRepresentable {
         // MARK: - Properties
         let parent: UberMapViewRepresentable
         var userLocationCoordinate: CLLocationCoordinate2D?
+        var currentMapViewRegion: MKCoordinateRegion?
         
-         // MARK: - Init
+        // MARK: - Init
         init(parent: UberMapViewRepresentable) {
             self.parent = parent
             super.init()
@@ -65,7 +78,7 @@ extension UberMapViewRepresentable {
         /// In here, we will use the userLocation parameter to create a boundrary/Region to zoom in
         /// And display the user location
         func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-            self.userLocationCoordinate = userLocation.coordinate
+            userLocationCoordinate = userLocation.coordinate
             
             let region = MKCoordinateRegion(
                 center: CLLocationCoordinate2D(
@@ -77,6 +90,7 @@ extension UberMapViewRepresentable {
                     longitudeDelta: 0.05
                 )
             )
+            currentMapViewRegion = region
             
             parent.mapView.setRegion(region, animated: true)
         }
@@ -135,6 +149,16 @@ extension UberMapViewRepresentable {
                 guard let route = response?.routes.first else { return }
                 
                 completion(route)
+            }
+        }
+        
+        
+        func clearMapViewAndRecenterOnUserLocation() {
+            parent.mapView.removeAnnotations(parent.mapView.annotations)
+            parent.mapView.removeOverlays(parent.mapView.overlays)
+            
+            if let currentMapViewRegion = currentMapViewRegion {
+                parent.mapView.setRegion(currentMapViewRegion, animated: true)
             }
         }
     }
