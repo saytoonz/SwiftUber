@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		225E45AB29AD405100B612ED /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E45AA29AD405100B612ED /* RideRequestView.swift */; };
+		225E45AD29ADD80000B612ED /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E45AC29ADD80000B612ED /* RideType.swift */; };
 		22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */; };
 		22DCA43129AB4D2B001ED045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43029AB4D2B001ED045 /* Assets.xcassets */; };
 		22DCA43429AB4D2B001ED045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43329AB4D2B001ED045 /* Preview Assets.xcassets */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		225E45AA29AD405100B612ED /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
+		225E45AC29ADD80000B612ED /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		22DCA42929AB4D26001ED045 /* SwiftUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUberApp.swift; sourceTree = "<group>"; };
 		22DCA43029AB4D2B001ED045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				22DCA45A29AC8EFC001ED045 /* MapViewState.swift */,
+				225E45AC29ADD80000B612ED /* RideType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				22DCA44329AB4E81001ED045 /* HomeView.swift in Sources */,
 				22DCA45129ABC945001ED045 /* LocationSearchActivationView.swift in Sources */,
 				22DCA45729ABD849001ED045 /* LocationSearchResultCell.swift in Sources */,
+				225E45AD29ADD80000B612ED /* RideType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
