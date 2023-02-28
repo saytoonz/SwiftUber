@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		225E45AB29AD405100B612ED /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E45AA29AD405100B612ED /* RideRequestView.swift */; };
 		225E45AD29ADD80000B612ED /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E45AC29ADD80000B612ED /* RideType.swift */; };
+		225E45AF29ADEC5F00B612ED /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225E45AE29ADEC5F00B612ED /* Double.swift */; };
 		22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */; };
 		22DCA43129AB4D2B001ED045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43029AB4D2B001ED045 /* Assets.xcassets */; };
 		22DCA43429AB4D2B001ED045 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22DCA43329AB4D2B001ED045 /* Preview Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		225E45AA29AD405100B612ED /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		225E45AC29ADD80000B612ED /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
+		225E45AE29ADEC5F00B612ED /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		22DCA42929AB4D26001ED045 /* SwiftUber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22DCA42C29AB4D26001ED045 /* SwiftUberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUberApp.swift; sourceTree = "<group>"; };
 		22DCA43029AB4D2B001ED045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		22DCA43C29AB4DB7001ED045 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				225E45AE29ADEC5F00B612ED /* Double.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				22DCA45529ABD2E2001ED045 /* LocationSearchView.swift in Sources */,
 				22DCA44A29ABB8A2001ED045 /* LocationManager.swift in Sources */,
 				225E45AB29AD405100B612ED /* RideRequestView.swift in Sources */,
+				225E45AF29ADEC5F00B612ED /* Double.swift in Sources */,
 				22DCA45B29AC8EFC001ED045 /* MapViewState.swift in Sources */,
 				22DCA45329ABCE6E001ED045 /* MapViewActionButton.swift in Sources */,
 				22DCA42D29AB4D26001ED045 /* SwiftUberApp.swift in Sources */,

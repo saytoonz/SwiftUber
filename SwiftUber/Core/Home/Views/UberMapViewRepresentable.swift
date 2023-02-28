@@ -14,7 +14,6 @@ struct UberMapViewRepresentable: UIViewRepresentable {
     @EnvironmentObject var locationSearchVM: LocationSearchViewModel
     
     let mapView = MKMapView()
-    let locationManager = LocationManager()
     
     //This is where the view to be represented in UIView is created
     func makeUIView(context: Context) -> some UIView {
