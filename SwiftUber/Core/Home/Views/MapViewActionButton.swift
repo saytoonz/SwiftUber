@@ -20,9 +20,9 @@ struct MapViewActionButton: View {
         } label: {
             Image(systemName: imageNameForState(mapState))
                 .font(.title2)
-                .foregroundColor(.black)
+                .foregroundColor(Color.theme.primaryTextColor)
                 .padding()
-                .background(.white)
+                .background(Color.theme.backgroundColor)
                 .clipShape(Circle())
                 .shadow(radius: 6)
             

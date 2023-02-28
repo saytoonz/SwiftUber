@@ -26,7 +26,7 @@ struct LocationSearchView: View {
                         .frame(width: 1, height: 24)
                     
                     Rectangle()
-                        .fill(Color(.black))
+                        .fill(Color.theme.primaryTextColor)
                         .frame(width: 6, height: 6)
                 }
                 VStack {
@@ -68,7 +68,8 @@ struct LocationSearchView: View {
             
             
         }
-        .background(Color(.systemBackground))
+        .background(Color.theme.backgroundColor)
+        .background(.white)
     }
 }
 
