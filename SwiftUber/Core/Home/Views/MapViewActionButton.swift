@@ -35,7 +35,7 @@ struct MapViewActionButton: View {
         switch state {
         case .noInput:
             break
-        case .searchingForLocation, .locationSelected:
+        case .searchingForLocation, .locationSelected, .polylineAdded:
             mapState = .noInput
             locationSearchVM.selectedUberLocation = nil
         }
@@ -45,7 +45,7 @@ struct MapViewActionButton: View {
         switch state {
         case .noInput:
             return "line.3.horizontal"
-        case .searchingForLocation, .locationSelected:
+        case .searchingForLocation, .locationSelected, .polylineAdded:
             return "chevron.left"
         }
     }
