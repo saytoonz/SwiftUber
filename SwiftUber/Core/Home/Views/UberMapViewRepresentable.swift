@@ -115,8 +115,7 @@ extension UberMapViewRepresentable {
             annotation.coordinate = coodinate
             parent.mapView.addAnnotation(annotation)
             parent.mapView.selectAnnotation(annotation, animated: true)
-            
-            parent.mapView.showAnnotations(parent.mapView.annotations, animated: true)
+                        
         }
         
         
@@ -124,6 +123,9 @@ extension UberMapViewRepresentable {
             guard let userLocCoordinate = userLocationCoordinate else { return }
             getDestinationRoute(from: userLocCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)
+                let rect = self.parent.mapView.mapRectThatFits(route.polyline.boundingMapRect,
+                                                               edgePadding: .init(top: 46, left: 32, bottom: 500, right: 32))
+                self.parent.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             }
         }
         
