@@ -34,10 +34,10 @@ struct MapViewActionButton: View {
     func actionForState(_ state: MapViewState) {
         switch state {
         case .noInput:
-            print("DEBUG: No input")
+            break
         case .searchingForLocation, .locationSelected:
             mapState = .noInput
-            locationSearchVM.selectedLocationCoordinate = nil
+            locationSearchVM.selectedUberLocation = nil
         }
     }
     
